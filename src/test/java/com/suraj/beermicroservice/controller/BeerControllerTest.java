@@ -6,6 +6,7 @@ import com.suraj.beermicroservice.domain.Beer;
 import com.suraj.beermicroservice.model.BeerDto;
 import com.suraj.beermicroservice.model.BeerStyleEnum;
 import com.suraj.beermicroservice.repositories.BeerRepository;
+import com.suraj.beermicroservice.service.BeerService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.BDDMockito.given;
 //import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
@@ -51,9 +53,12 @@ class BeerControllerTest {
     @MockBean
     BeerRepository beerRepository;
 
+    @MockBean
+    BeerService beerService;
+
     @Test
     void getBeerId() throws Exception {
-        given(beerRepository.findById(any())).willReturn(Optional.of(Beer.builder().build()));
+        given(beerService.getById(any())).willReturn(getValidBeerDto());
 
         mockMvc.perform(get("/api/v1/beer/{beerId}" , UUID.randomUUID().toString()).accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
