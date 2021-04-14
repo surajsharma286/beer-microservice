@@ -58,7 +58,7 @@ class BeerControllerTest {
 
     @Test
     void getBeerId() throws Exception {
-        given(beerService.getById(any())).willReturn(getValidBeerDto());
+        given(beerService.getById(any(),anyBoolean())).willReturn(getValidBeerDto());
 
         mockMvc.perform(get("/api/v1/beer/{beerId}" , UUID.randomUUID().toString()).accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
@@ -121,9 +121,9 @@ class BeerControllerTest {
     private BeerDto getValidBeerDto(){
         return BeerDto.builder()
                 .beerName("Pale Ale")
-                .beerStyle(BeerStyleEnum.ALE)
+                .beerStyle(BeerStyleEnum.PALE_ALE)
                 .price(new BigDecimal("11.95"))
-                .upc(112123L)
+                .upc("112123")
                 .build();
     }
 
