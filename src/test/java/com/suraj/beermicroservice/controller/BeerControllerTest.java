@@ -7,6 +7,8 @@ import com.suraj.beermicroservice.model.BeerDto;
 import com.suraj.beermicroservice.model.BeerStyleEnum;
 import com.suraj.beermicroservice.repositories.BeerRepository;
 import com.suraj.beermicroservice.service.BeerService;
+import com.suraj.beermicroservice.service.inventory.BeerInventoryService;
+import com.suraj.beermicroservice.service.inventory.BeerInventoryServiceRestTemplateImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,6 +57,9 @@ class BeerControllerTest {
 
     @MockBean
     BeerService beerService;
+
+    @MockBean
+    BeerInventoryServiceRestTemplateImpl beerInventoryServiceRestTemplate;
 
     @Test
     void getBeerId() throws Exception {
