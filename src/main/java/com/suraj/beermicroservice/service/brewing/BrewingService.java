@@ -1,8 +1,8 @@
-package com.suraj.beermicroservice.service;
+package com.suraj.beermicroservice.service.brewing;
 
 import com.suraj.beermicroservice.config.JmsConfig;
 import com.suraj.beermicroservice.domain.Beer;
-import com.suraj.beermicroservice.events.BrewBeerEvent;
+import guru.sfg.common.BrewBeerEvent;
 import com.suraj.beermicroservice.mappers.BeerMapper;
 import com.suraj.beermicroservice.repositories.BeerRepository;
 import com.suraj.beermicroservice.service.inventory.BeerInventoryService;

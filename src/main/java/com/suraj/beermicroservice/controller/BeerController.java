@@ -1,6 +1,6 @@
 package com.suraj.beermicroservice.controller;
 
-import com.suraj.beermicroservice.model.BeerDto;
+import guru.sfg.common.BeerDto;
 import com.suraj.beermicroservice.model.BeerPageList;
 import com.suraj.beermicroservice.model.BeerStyleEnum;
 import com.suraj.beermicroservice.service.BeerService;

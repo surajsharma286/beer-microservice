@@ -1,7 +1,8 @@
 package com.suraj.beermicroservice.model;
 
+import guru.sfg.common.BeerDto;
+
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 

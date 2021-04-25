@@ -1,7 +1,8 @@
-package com.suraj.beermicroservice.events;
+package guru.sfg.common;
 
-import com.suraj.beermicroservice.model.BeerDto;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 public class NewInventoryEvent extends BeerEvent{
 
     public NewInventoryEvent(BeerDto beerDto) {
