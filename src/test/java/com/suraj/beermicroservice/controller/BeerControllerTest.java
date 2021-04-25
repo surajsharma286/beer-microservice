@@ -1,28 +1,19 @@
 package com.suraj.beermicroservice.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import com.suraj.beermicroservice.domain.Beer;
 import com.suraj.beermicroservice.model.BeerDto;
 import com.suraj.beermicroservice.model.BeerStyleEnum;
 import com.suraj.beermicroservice.repositories.BeerRepository;
 import com.suraj.beermicroservice.service.BeerService;
-import com.suraj.beermicroservice.service.inventory.BeerInventoryService;
 import com.suraj.beermicroservice.service.inventory.BeerInventoryServiceRestTemplateImpl;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
-//import org.springframework.restdocs.RestDocumentationExtension;
-//import org.springframework.restdocs.constraints.ConstraintDescriptions;
-//import org.springframework.restdocs.payload.FieldDescriptor;
+import org.springframework.jms.core.JmsTemplate;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
 import java.util.UUID;
@@ -52,6 +43,9 @@ class BeerControllerTest {
 
     @MockBean
     BeerInventoryServiceRestTemplateImpl beerInventoryServiceRestTemplate;
+
+    @MockBean
+    JmsTemplate jmsTemplate;
 
     @Test
     void getBeerId() throws Exception {
