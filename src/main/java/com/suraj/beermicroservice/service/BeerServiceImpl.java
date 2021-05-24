@@ -2,9 +2,9 @@ package com.suraj.beermicroservice.service;
 
 import com.suraj.beermicroservice.domain.Beer;
 import com.suraj.beermicroservice.mappers.BeerMapper;
-import guru.sfg.common.BeerDto;
-import com.suraj.beermicroservice.model.BeerPageList;
-import com.suraj.beermicroservice.model.BeerStyleEnum;
+import guru.sfg.brewery.model.BeerDto;
+import guru.sfg.brewery.model.BeerPageList;
+import guru.sfg.brewery.model.BeerStyleEnum;
 import com.suraj.beermicroservice.repositories.BeerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.Cacheable;

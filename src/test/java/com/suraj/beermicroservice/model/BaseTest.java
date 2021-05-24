@@ -1,6 +1,7 @@
 package com.suraj.beermicroservice.model;
 
-import guru.sfg.common.BeerDto;
+import guru.sfg.brewery.model.BeerStyleEnum;
+import guru.sfg.brewery.model.BeerDto;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;

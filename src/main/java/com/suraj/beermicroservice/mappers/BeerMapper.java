@@ -1,7 +1,7 @@
 package com.suraj.beermicroservice.mappers;
 
 import com.suraj.beermicroservice.domain.Beer;
-import guru.sfg.common.BeerDto;
+import guru.sfg.brewery.model.BeerDto;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 

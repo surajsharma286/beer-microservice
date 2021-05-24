@@ -2,9 +2,9 @@ package com.suraj.beermicroservice.service.brewing;
 
 import com.suraj.beermicroservice.config.JmsConfig;
 import com.suraj.beermicroservice.domain.Beer;
-import guru.sfg.common.BrewBeerEvent;
-import guru.sfg.common.NewInventoryEvent;
-import guru.sfg.common.BeerDto;
+import guru.sfg.brewery.model.events.BrewBeerEvent;
+import guru.sfg.brewery.model.events.NewInventoryEvent;
+import guru.sfg.brewery.model.BeerDto;
 import com.suraj.beermicroservice.repositories.BeerRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

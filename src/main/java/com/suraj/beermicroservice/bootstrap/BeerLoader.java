@@ -1,7 +1,7 @@
 package com.suraj.beermicroservice.bootstrap;
 
 import com.suraj.beermicroservice.domain.Beer;
-import com.suraj.beermicroservice.model.BeerStyleEnum;
+import guru.sfg.brewery.model.BeerStyleEnum;
 import com.suraj.beermicroservice.repositories.BeerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;

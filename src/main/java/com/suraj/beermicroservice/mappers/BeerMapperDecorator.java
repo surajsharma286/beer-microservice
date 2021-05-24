@@ -1,7 +1,7 @@
 package com.suraj.beermicroservice.mappers;
 
 import com.suraj.beermicroservice.domain.Beer;
-import guru.sfg.common.BeerDto;
+import guru.sfg.brewery.model.BeerDto;
 import com.suraj.beermicroservice.service.inventory.BeerInventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 

@@ -1,8 +1,8 @@
 package com.suraj.beermicroservice.service;
 
-import guru.sfg.common.BeerDto;
-import com.suraj.beermicroservice.model.BeerPageList;
-import com.suraj.beermicroservice.model.BeerStyleEnum;
+import guru.sfg.brewery.model.BeerDto;
+import guru.sfg.brewery.model.BeerPageList;
+import guru.sfg.brewery.model.BeerStyleEnum;
 import org.springframework.data.domain.PageRequest;
 
 import java.util.UUID;

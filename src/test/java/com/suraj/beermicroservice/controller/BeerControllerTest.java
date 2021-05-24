@@ -1,8 +1,8 @@
 package com.suraj.beermicroservice.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import guru.sfg.common.BeerDto;
-import com.suraj.beermicroservice.model.BeerStyleEnum;
+import guru.sfg.brewery.model.BeerDto;
+import guru.sfg.brewery.model.BeerStyleEnum;
 import com.suraj.beermicroservice.repositories.BeerRepository;
 import com.suraj.beermicroservice.service.BeerService;
 import com.suraj.beermicroservice.service.inventory.BeerInventoryServiceRestTemplateImpl;
